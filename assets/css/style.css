@@ -15,6 +15,47 @@
 .cursor_pointer {
   cursor: pointer;
 }
+
+/* pre-loader-end */
+/* back to top
+/* back-to-top  */
+#button {
+  display: inline-block;
+  padding: 20px;
+  background-color: #007aff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "^";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #00cdb4;
+}
+#button:active {
+  background-color: #00cdb4;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* back-to-top  */
 /* nav */
 .nav_border {
   border-bottom: 0.5px solid var(--colours-line-outline-grey, #c0c4ca);
@@ -231,21 +272,27 @@ input[type="checkbox"] {
   background-position: 100%;
   box-shadow: 0px 2px 4px 0px #717376;
 }
-.love_card:hover .love_text{
-color: white !important;
+.love_card:hover .love_text {
+  color: white !important;
 }
-.love_text{
-    transition: all 200ms ease-in-out;
+.love_text {
+  transition: all 200ms ease-in-out;
 }
 .love_card2 {
   border-bottom: 8px solid var(--colours-secondary-teal, #00cdb4) !important;
-  background-image: linear-gradient(30deg, transparent 50%, #00cdb4 50%) !important;
-
+  background-image: linear-gradient(
+    30deg,
+    transparent 50%,
+    #00cdb4 50%
+  ) !important;
 }
 .love_card3 {
   border-bottom: 8px solid var(--colours-secondary-orange, #ff713e) !important;
-  background-image: linear-gradient(30deg, transparent 50%, #ff713e 50%) !important;
-
+  background-image: linear-gradient(
+    30deg,
+    transparent 50%,
+    #ff713e 50%
+  ) !important;
 }
 .love_img_card {
   width: 80px;
@@ -272,17 +319,89 @@ color: white !important;
 }
 /* success-3 */
 /* help-4 */
-/* .help_card1 {
+.help_blue_card {
     max-width: 384px;
+    width: 100%;
+    padding: 55px 0px;
+    /* height: 250px; */
   border-radius: 15px;
-  height: 100%;
-  background: var(--colours-primary-blue, #007aff);
-  padding: 98px 126px 56px 25px;
-  background-image: url("../images/png/help_card1a.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
+  background: var(--colours-primary-blue, #007aff) !important;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+}
+.help_orange_card{
+  background: var(--colours-primary-blue, #FFAA2E) !important;
+  cursor: pointer;
+}
+
+.help_lightblue_card{
+  background: var(--colours-primary-blue, #5B67EF) !important; 
+  cursor: pointer;
+}
+.help_blue_card:hover .help_boy1{
+    right: 0%;
+
+} 
+.help_blue_card:hover .blue_card_circle{
+    left: 0%;
+
+} 
+.help_blue_card:hover .help_phone{
+    right: 30px;
+
+} 
+.help_blue_card:hover .help_phone2{
+    right: 0px;
+
+} 
+.help_blue_card:hover .help_big_phn{
+    right: 0px;
+
+} 
+.help_boy1{
+  transition: all 200ms ease-in-out;
+    right: -100%;
+    top: 14px;
+    z-index: 1;
+}
+.blue_card_circle{
+  transition: all 200ms ease-in-out;
+    left: -100%;
+    top: 0px;
+    z-index: 1;
+}
+.help_card_orange{
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+.help_phone{
+    right: -130px;
+    top: 50px;
+    z-index: 2;
+  transition: all 200ms ease-in-out;
+
+}
+.help_phone2{
+    right: -100px;
+    top: 20px;
+    z-index: 1;
+  transition: all 200ms ease-in-out;
+
+}
+.help_big_phn{
+    right: -150px;
+    top: 10px;
+    z-index: 1;
+  transition: all 200ms ease-in-out;
+
+}
+.help_light_blue_bg{
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
 /* help-4 */
 /* article-6 */
 .max-w-295 {
@@ -408,6 +527,7 @@ color: white !important;
     left: -100%;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     background-color: #e8f1ff;
     flex-direction: column;
     justify-content: center;
@@ -432,6 +552,7 @@ color: white !important;
     background-color: black;
   }
   input[type="checkbox"]:checked ~ ul.sm-screen {
+    min-height: 100vh;
     left: 0;
   }
   .overflow_hidden {
