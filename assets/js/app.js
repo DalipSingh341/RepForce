@@ -26,6 +26,10 @@ btn.on("click", function (e) {
 });
 
 // preloader//
-//  setTimeout(function () {
-//    document.querySelector(".preloader").classList.add("loader");
-//  }, 3000); 
+setTimeout(() => {
+  const box = document.getElementById("box");
+
+  box.style.display = "none";
+
+  document.body.classList.remove("overflow-hidden");
+}, 1500);

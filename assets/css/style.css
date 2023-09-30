@@ -15,6 +15,26 @@
 .cursor_pointer {
   cursor: pointer;
 }
+/* preloder */
+.preloader-box {
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #b6d4f6;
+    position: fixed;
+    z-index: 100;
+}
+
+.loder-img {
+    animation: zoom-in 4s linear infinite;
+}
+
+html body {
+    scroll-behavior: smooth !important;
+}
 /* back-to-top  */
 #button {
   display: inline-block;
@@ -30,7 +50,7 @@
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 99;
 }
 #button::after {
   content: "^";
@@ -118,38 +138,38 @@ input[type="checkbox"] {
 }
 /* nav */
 /* hero-section */
-.girl_hero{
-  width: 100px;height: 100px;
+.girl_hero {
+  width: 100px;
+  height: 100px;
   background-color: rgba(255, 8, 121, 1);
   border: 7px solid white;
   border-radius: 50%;
-  animation: zoom-in 3s  200ms linear infinite;
-
+  animation: zoom-in 3s 200ms linear infinite;
 }
-.left_phn_box_boy{
-  width: 44px;height: 44px;
+.left_phn_box_boy {
+  width: 44px;
+  height: 44px;
   background-color: white;
   border-radius: 4px solid white;
   border-radius: 50%;
-  animation: zoom-in 3s  200ms linear infinite;
-
+  animation: zoom-in 3s 200ms linear infinite;
 }
-.right_girl_circle{
+.right_girl_circle {
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: white;
-  animation: zoom-in 2s  200ms linear infinite;
+  animation: zoom-in 2s 200ms linear infinite;
 }
 @keyframes zoom-in {
-  0%{
-    transform: scale(1.0);
+  0% {
+    transform: scale(1);
   }
-  50%{
+  50% {
     transform: scale(1.2);
   }
-  100%{
-    transform: scale(1.0);
+  100% {
+    transform: scale(1);
   }
 }
 .header_pin {
@@ -201,8 +221,7 @@ input[type="checkbox"] {
 .left_phn_green_box {
   left: -13%;
   bottom: -17%;
-  animation: zoom-in 4s  200ms linear infinite;
-
+  animation: zoom-in 4s 200ms linear infinite;
 }
 .left_phn_card2 {
   left: 43%;
@@ -219,7 +238,6 @@ input[type="checkbox"] {
 .right_phn_box {
   left: -20%;
   top: 35%;
-
 }
 .right_phn_blur_car {
   left: -5%;
@@ -232,8 +250,7 @@ input[type="checkbox"] {
 .right_phn_card2_boy {
   left: 0%;
   top: -5%;
-  animation: zoom-in 2s  200ms linear infinite;
-
+  animation: zoom-in 2s 200ms linear infinite;
 }
 /* hero-section */
 /* section-1  */
