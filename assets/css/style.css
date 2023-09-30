@@ -586,13 +586,17 @@ input[type="checkbox"] {
     height: 4px;
     background-color: black;
   }
-  input[type="checkbox"]:checked ~ ul.sm-screen {
+  /* input[type="checkbox"]:checked ~ ul.sm-screen {
     min-height: 100vh;
+    left: 0;
+  } */
+  .show1{
     left: 0;
   }
   .overflow_hidden {
     overflow: hidden;
   }
+
 
   .article_text_boxx1 {
     padding: 6px !important;
