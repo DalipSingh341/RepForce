@@ -25,7 +25,7 @@
     align-items: center;
     background-color: #b6d4f6;
     position: fixed;
-    z-index: 100;
+    z-index: 101;
 }
 
 .loder-img {
@@ -564,9 +564,12 @@ input[type="checkbox"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 100 !important;
     transition: all 500ms linear;
   }
-
+.z_100{
+  z-index: 100 !important;
+}
   label[for="menuIcon"] {
     width: 35px;
     height: 30px;
